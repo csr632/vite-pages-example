@@ -7,7 +7,8 @@
     "dev": "vite serve --force",
     "build": "rm -rf dist && vite build --outDir dist",
     "ssr": "rm -rf dist && vite-pages ssr",
-    "deploy": "npm run ssr && touch ./dist/.nojekyll && gh-pages -d dist -t"
+    "ssr-for-deploy": "rm -rf dist && vite-pages ssr --base \"/vite-pages-example\"",
+    "deploy": "npm run ssr-for-deploy && touch ./dist/.nojekyll && gh-pages -d dist -t"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +18,7 @@
     "@pika/react": "^16.13.1",
     "@pika/react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
-    "vite-pages-theme-basic": "^0.1.0"
+    "vite-pages-theme-basic": "^0.1.1"
   },
   "devDependencies": {
     "@types/react": "^16.9.36",
@@ -29,6 +30,6 @@
     "vite": "^0.20.8",
     "vite-plugin-mdx": "^0.0.2",
     "vite-plugin-react": "^2.0.3",
-    "vite-plugin-react-pages": "^0.1.0"
+    "vite-plugin-react-pages": "^0.1.2"
   }
 }
