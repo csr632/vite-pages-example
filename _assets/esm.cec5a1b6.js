@@ -1,4 +1,4 @@
-import { R as React, L as Link } from './client.0aea9ca6.js';
+import { R as React, L as Link } from './client.8f5ebe2f.js';
 
 var s = {"topBar":"topBar_67634860","logo":"logo_67634860","navs":"navs_67634860","navsList":"navsList_67634860","navsListItem":"navsListItem_67634860"};
 
@@ -78,7 +78,7 @@ var _render = createRender({
   topNavs: [
     {
       text: "🎮 Example",
-      href: "https://csr632.github.io/vite-pages-example/"
+      href: "https://github.com/csr632/vite-pages-example"
     },
     {
       text: "⭐ Github",
