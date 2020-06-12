@@ -83,10 +83,10 @@ var _render = createRender({
   topNavs: [
     {
       text: "Github ⭐",
-      href: "https://github.com/csr632/vite-plugin-react-pages"
+      href: "https://github.com/vitejs/vite-plugin-react-pages"
     }
   ],
-  logo: "Vite Pages"
+  logo: "Vite Pages React"
 });
 
 function _defineProperty(obj, key, value) {

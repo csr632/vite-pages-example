@@ -1,4 +1,4 @@
-import { R as React, L as Link } from './client.d423ab38.js';
+import { R as React, L as Link } from './client.f397fd10.js';
 
 var s = {"topBar":"topBar_67634860","logo":"logo_67634860","navs":"navs_67634860","navsList":"navsList_67634860","navsListItem":"navsListItem_67634860"};
 
@@ -78,10 +78,10 @@ var _render = createRender({
   topNavs: [
     {
       text: "Github ⭐",
-      href: "https://github.com/csr632/vite-plugin-react-pages"
+      href: "https://github.com/vitejs/vite-plugin-react-pages"
     }
   ],
-  logo: "Vite Pages"
+  logo: "Vite Pages React"
 });
 
 function _defineProperty(obj, key, value) {
