@@ -809,7 +809,7 @@ function getRouteFromPagesData(pages) {
 function renderToString(url) {
     var _a;
     return ReactDOM.renderToString(React__default.createElement(React__default.StrictMode, null,
-        React__default.createElement(reactRouterDom.StaticRouter, { basename: (_a = "vite-pages-example/") === null || _a === void 0 ? void 0 : _a.replace(/\/$/, ''), location: url },
+        React__default.createElement(reactRouterDom.StaticRouter, { basename: (_a = "/vite-pages-example/") === null || _a === void 0 ? void 0 : _a.replace(/\/$/, ''), location: url },
             React__default.createElement(ssrDataCtx.Provider, { value: ssrData },
                 React__default.createElement(App, null)))));
 }

@@ -2257,19 +2257,19 @@ const PageLoader = ({ pages, path }) => {
 
 const pages = {};
 pages["/"] = {
-             _importFn: () => import('./__rootIndex__.f84b8f0c.js'),
+             _importFn: () => import('./__rootIndex__.34df232e.js'),
              staticData: {"sort":0,"sourceType":"md"},
          };
 pages["/page-data"] = {
-             _importFn: () => import('./page-data.8fd8aee1.js'),
+             _importFn: () => import('./page-data.0a99524b.js'),
              staticData: {"sort":3,"sourceType":"md"},
          };
 pages["/pages"] = {
-             _importFn: () => import('./pages.c5422ffa.js'),
+             _importFn: () => import('./pages.d37cbaec.js'),
              staticData: {"sort":1,"sourceType":"md"},
          };
 pages["/theme"] = {
-             _importFn: () => import('./theme.62123303.js'),
+             _importFn: () => import('./theme.cb7066df.js'),
              staticData: {"sort":2,"sourceType":"md"},
          };
 
@@ -2293,7 +2293,7 @@ function getRouteFromPagesData(pages) {
 
 var _a;
 ReactDOM.hydrate(React.createElement(React.StrictMode, null,
-    React.createElement(BrowserRouter, { basename: (_a = "vite-pages-example/") === null || _a === void 0 ? void 0 : _a.replace(/\/$/, '') },
+    React.createElement(BrowserRouter, { basename: (_a = "/vite-pages-example/") === null || _a === void 0 ? void 0 : _a.replace(/\/$/, '') },
         React.createElement(App, null))), document.getElementById('root'));
 
 export { Link as L, React as R };
