@@ -82,7 +82,11 @@ function defaultMenu(pages) {
 var _render = createRender({
   topNavs: [
     {
-      text: "Github ⭐",
+      text: "🎮 Example",
+      href: "https://csr632.github.io/vite-pages-example/"
+    },
+    {
+      text: "⭐ Github",
       href: "https://github.com/vitejs/vite-plugin-react-pages"
     }
   ],

@@ -1,4 +1,4 @@
-import { R as React, L as Link } from './client.f397fd10.js';
+import { R as React, L as Link } from './client.0aea9ca6.js';
 
 var s = {"topBar":"topBar_67634860","logo":"logo_67634860","navs":"navs_67634860","navsList":"navsList_67634860","navsListItem":"navsListItem_67634860"};
 
@@ -77,7 +77,11 @@ function defaultMenu(pages) {
 var _render = createRender({
   topNavs: [
     {
-      text: "Github ⭐",
+      text: "🎮 Example",
+      href: "https://csr632.github.io/vite-pages-example/"
+    },
+    {
+      text: "⭐ Github",
       href: "https://github.com/vitejs/vite-plugin-react-pages"
     }
   ],
