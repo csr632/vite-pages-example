@@ -4,7 +4,7 @@ export default createRender({
   topNavs: [
     {
       text: "🎮 Example",
-      href: "https://csr632.github.io/vite-pages-example/",
+      href: "https://github.com/csr632/vite-pages-example",
     },
     {
       text: "⭐ Github",
