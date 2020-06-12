@@ -2,6 +2,8 @@
 sort: 3
 ---
 
+import { Link } from 'react-router-dom'
+
 # Page data
 
 ## Static page metadata
@@ -38,22 +40,21 @@ This will be resolved into:
 { "title": "my page", "tags": ["tag1", "tag2"] }
 ```
 
-## runtime page data
+## Runtime page data
 
 Runtime page data is just anything you export from a page file.
 
 ## Difference
 
-Both static data and runtime data will be passed to \_render.js, so the theme can use them to render layout.
+Both static data and runtime data will be passed to `_render.js`, so the theme can use them to render layout.
+
 Difference:
 
 - Static data of **all pages** is loaded when the app bootstrap. So you should try to keep the static data small.
-- Runtime data is loaded when user navigate to the page.
+- Runtime data is only loaded when user navigate to that page.
 - The value type of static data is limited (string or simple object/array); The value of runtime data can be javascript value (.e.g a React component).
 
 ## Where to consume these data
-
-import { Link } from 'react-router-dom'
 
 As stated in the <Link to="/theme">theme doc</Link>, `_render.tsx` should export a **render function** with this type:
 
@@ -80,3 +81,11 @@ interface IPages {
   }
 }
 ```
+
+## vite-pages core doesn't care about your page data
+
+vite-pages itself doesn't care about your page data structure. How to interpret the page data, is totally decided by <Link to="/theme">your theme</Link>. This design make the vite-pages core more "simple" and make themes more powerful.
+
+Most themes ask users to `export default` a React component from page files. But that is not a requirement from vite-pages core.
+
+If you are a theme user, you should read the doc of your theme to learn what data should be exposed by your pages.

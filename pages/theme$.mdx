@@ -2,10 +2,15 @@
 sort: 2
 ---
 
+import { Link } from 'react-router-dom'
+
 # Theme customization
 
-Vite pages provides only one theme API: `_render.tsx`.
-`_render.tsx` should export a **render function**: `(pageData: any, pages: IPages) => React.ReactElement`. For example:
+vite-pages provides only one theme API: `_render.tsx`. It should export a **render function**: `(pageData: any, pages: IPages) => React.ReactElement`. This API is so simple, but powerful.
+
+> The render function should be pure.
+
+For example:
 
 ```tsx
 import React from 'react'
@@ -19,23 +24,21 @@ const render: IRenderPage = (pageData, pages) => {
 export default render
 ```
 
-import { Link } from 'react-router-dom'
+You will learn about the parameters of the render function in the <Link to="/page-data">page-data doc</Link>.
 
-We will explain the parameters of the render function in <Link to="/page-data">page-data doc</Link>.
-
-> The render function should be pure.
-
-You can implement your theme in the Layout component. You can also import a render function from a npm package.
+You can customize your theme in the Layout component. You can also use a Layout component (or render function) from a npm package.
 
 ## Nearest theme config wins
 
-You can have multiple `_render.tsx` in the pages directory. For each page file. It will find-up the nearest `_render.tsx`. And use it to render the page layout.
+You can have multiple `_render.tsx` in the pages directory. For each page file, vite-pages will find-up the nearest `_render.tsx`. And use it to render the page layout.
 
-## Suggestion: use higher order function to config theme
+## Suggestions
 
-You can export your theme as a higher order function to make it more configurable.
+### To theme providers: make your theme easier to use
 
-For example, theme provider export theme as this function:
+We encourage theme providers to export your theme as **a higher order function** that return `(pageData: any, pages: IPages) => React.ReactElement`, to make it more easier to use.
+
+For example, the theme provider can export theme as this function:
 
 ```tsx
 import React from 'react'
@@ -43,6 +46,7 @@ import Layout from '../Layout'
 import type { IRenderPage } from 'vite-plugin-react-pages/client'
 
 export const createTheme = (sideMenuData): IRenderPage => {
+  // return a render funtion
   return (pageData, pages) => {
     return (
       <Layout
@@ -54,30 +58,81 @@ export const createTheme = (sideMenuData): IRenderPage => {
 }
 ```
 
-Theme consumer can use it multiple times to make different sideMenu in different pages.
-
-Configure sideMenu for `/guides/*` in `/guides/_render.tsx`:
+Theme consumer can use it multiple times to make different sideMenu in different pages:
 
 ```tsx
+// Configure sideMenu for `/guides/*` in `/guides/_render.tsx`:
+import createTheme from 'theme-pkg'
 export default createTheme([
   { path: '/guides/guide1', label: 'guide1' },
   { path: '/guides/guide2', label: 'guide1' },
 ])
-```
 
-Configure sideMenu for `/references/*` in `/references/_render.tsx`:
-
-```tsx
+// Configure sideMenu for `/references/*` in `/references/_render.tsx`:
+import createTheme from 'theme-pkg'
 export default createTheme([
   { path: '/references/ref1', label: 'ref1' },
   { path: '/references/ref2', label: 'ref2' },
 ])
 ```
 
-We encourage theme providers to export config function like this `createTheme`, to make theme easier to use.
+As you can see, the theme is easier to use because **consumers don't need to know about the `_render.tsx` API**. For this reason, we encourage theme providers to export config function like the `createTheme` above.
+
+### To theme consumers: config composition is just function composition
+
+If your are a theme consumer, you can also create higher order functions to reuse config. For example, given the `createTheme` above, theme consumers can create this function:
+
+```tsx
+// provide some config that applied to whole site
+// `/with-site-config.tsx`:
+import createTheme from 'theme-pkg'
+export default (pageMenu) =>
+  createTheme([{ path: '/site-index', label: 'index' }, ...pageMenu])
+// the "index menu item" is a site-wise config
+
+// add some config only applied to `/guides/*`
+// `/guides/_render.tsx`:
+import withSiteConfig from '../with-site-config'
+export default withSiteConfig([
+  { path: '/guides/guide1', label: 'guide1' },
+  { path: '/guides/guide2', label: 'guide1' },
+])
+
+// add some config only applied to `/references/*`
+// `/references/_render.tsx`:
+import withSiteConfig from '../with-site-config'
+export default withSiteConfig([
+  { path: '/references/ref1', label: 'ref1' },
+  { path: '/references/ref2', label: 'ref2' },
+])
+```
+
+**Config composition is just function composition**. There is no magic here. They are just simple import/export and function composition. vite-pages doesn't care how you get the render function, as long as you export a render function in `_render.tsx`.
+
+### Why design this config API?
+
+#### Releases the power of Typescript
+
+Users can get Typescript type-check and intelliSense when they are writing these kind of config code. In comparison, **most frameworks out there can't utilize the power of Typescript, because their config is too "dynamic" to be type-checked**.
+
+#### Benefit from code splitting
+
+What's better, this way of config can greatly benefit from code splitting. For example, with the following site structure:
+
+```tsx
+// `/guides/_render.tsx`:
+import createTheme1 from 'big-theme-1'
+export default createTheme1()
+
+// `/references/_render.tsx`:
+import createTheme2 from 'big-theme-2'
+export default createTheme2()
+```
+
+When a reader visits `/guides/guide1`, he/she will only download the code of `big-theme-1`, while `big-theme-2` will not be downloaded.
 
 ## Caveat
 
-React will re-mount the component if the vdom tree hierarchy changes (.e.g `<Layout />` -> `<div><Layout /></div>`). If you want to retain the Layout component (so that the SideMenu scroll state won't get reset), you should render the Layout component in the "same position".
+React will re-mount the component if the vdom tree hierarchy changes (.e.g `<Layout />` -> `<div><Layout /></div>`). If you want to retain the Layout component (.e.g so that the SideMenu scroll state won't get reset), theme should render the Layout component in the "same position".
 
-The props of Layout component can change as you like. You can use that to make Layout component behave differently.
+The props of the component can change as you like and React will not re-mount it. Theme should take advantage of this property to make Layout behave differently across different pages.

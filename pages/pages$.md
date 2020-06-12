@@ -4,7 +4,7 @@ sort: 1
 
 # Pages
 
-Vite pages use filesystem based routing. You can create a page by simply creating a file: `page-name$.tsx`. Notice the `$` **at the end of the filename**. Vite pages recognize it and know it is a page file.
+vite-pages use filesystem based routing. You can create a page by simply creating a file: `page-name$.tsx`. Notice the `$` **at the end of the filename**. vite-pages recognizes it and know it is a page file.
 
 If the filename is `index$.tsx`, the page url path will be the path of the directory.
 
