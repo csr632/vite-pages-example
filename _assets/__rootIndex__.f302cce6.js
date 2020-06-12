@@ -1,6 +1,6 @@
-import './client.8f5ebe2f.js';
-import { c as createElement } from './esm.cec5a1b6.js';
-export { _ as renderPage } from './esm.cec5a1b6.js';
+import './client.c67ef2a2.js';
+import { c as createElement } from './esm.4d89620e.js';
+export { _ as renderPage } from './esm.4d89620e.js';
 
 const layoutProps = {};
 const MDXLayout = "wrapper";
@@ -22,18 +22,29 @@ function MDXContent({components, ...props}) {
     }
   }, `vite`), ` plugin for React. `, createElement("strong", {
     parentName: "p"
-  }, `It is very suitable for document site. It is also a great React UI demo development environment`), ` (like `, createElement("a", {
+  }, `It is very suitable for document site. It is also a great React UI development environment`), ` (like `, createElement("a", {
     parentName: "p",
     ...{
       href: "https://storybook.js.org/"
     }
   }, `storybook`), `).`), createElement("ul", null, createElement("li", {
     parentName: "ul"
-  }, `Fantastic development experience. Start the local development server in a blink, even when you have many pages. Hot module replacement works with React and Mdx, so you can get instant feedback when you edit the files. Big thanks to vite.`), createElement("li", {
+  }, createElement("strong", {
+    parentName: "li"
+  }, `Fantastic development experience`), `. Start the local development server in a blink, even when you have many pages. Hot module replacement works with React and Mdx, so you can get instant feedback when you edit the files. Big thanks to vite.`), createElement("li", {
     parentName: "ul"
-  }, `Filesystem based routing. It is easy to create, locate and develop pages. You don't need to worry about routing configuration.`), createElement("li", {
+  }, createElement("strong", {
+    parentName: "li"
+  }, `Filesystem based routing`), `. It is easy to create, locate and develop pages. You don't need to worry about routing configuration.`), createElement("li", {
     parentName: "ul"
-  }, `You can write content with both "normal React" or `, createElement("a", {
+  }, createElement("strong", {
+    parentName: "li"
+  }, `Support `, createElement("a", {
+    parentName: "strong",
+    ...{
+      href: "https://mdxjs.com/"
+    }
+  }, `Mdx`)), `. You can write content with both "normal React" or `, createElement("a", {
     parentName: "li",
     ...{
       href: "https://mdxjs.com/"
@@ -44,9 +55,13 @@ function MDXContent({components, ...props}) {
     parentName: "li"
   }, `only one theme API`), `, you can customize anything on the page. It is easy to write a theme that is sharable and configurable. If you use typescript, your theme configuration will get type-check and intelliSense.`), createElement("li", {
     parentName: "ul"
-  }, `Automatic code splitting based on pages. Readers don't need to download the whole app, they only load page data as needed.`), createElement("li", {
+  }, createElement("strong", {
+    parentName: "li"
+  }, `Automatic code splitting based on pages`), `. Readers don't need to download the whole app, they only load page data as needed.`), createElement("li", {
     parentName: "ul"
-  }, `Support SSR out of the box. Get even better user experience.`)), createElement("h2", null, `Getting stated`), createElement("ol", null, createElement("li", {
+  }, createElement("strong", {
+    parentName: "li"
+  }, `Support SSR out of the box`), `. Get even better user experience.`)), createElement("h2", null, `Getting stated`), createElement("ol", null, createElement("li", {
     parentName: "ol"
   }, `clone `, createElement("a", {
     parentName: "li",
