@@ -1,6 +1,6 @@
-import './client.c67ef2a2.js';
-import { c as createElement } from './esm.4d89620e.js';
-export { _ as renderPage } from './esm.4d89620e.js';
+import './client.4464e5a6.js';
+import { c as createElement } from './esm.50253d38.js';
+export { _ as renderPage } from './esm.50253d38.js';
 
 const layoutProps = {};
 const MDXLayout = "wrapper";
@@ -51,9 +51,11 @@ function MDXContent({components, ...props}) {
     }
   }, `Mdx`), `. Normal Reactjs is flexible and composable. While Mdx is readable and easy to edit. You can choose the proper format for your task. These formats can import each other like normal esModules.`), createElement("li", {
     parentName: "ul"
-  }, `Simple but powerful theme customization. With `, createElement("strong", {
+  }, createElement("strong", {
     parentName: "li"
-  }, `only one theme API`), `, you can customize anything on the page. It is easy to write a theme that is sharable and configurable. If you use typescript, your theme configuration will get type-check and intelliSense.`), createElement("li", {
+  }, `Simple but powerful theme customization`), `. With `, createElement("strong", {
+    parentName: "li"
+  }, `only one theme API`), `, you can customize anything on the page. It is easy to write a theme that is sharable and configurable. If you use typescript, your theme configuration code will get type-check and intelliSense.`), createElement("li", {
     parentName: "ul"
   }, createElement("strong", {
     parentName: "li"
