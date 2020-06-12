@@ -6,6 +6,7 @@ import remarkFrontmatter from 'remark-frontmatter'
 
 module.exports = {
   jsx: 'react',
+  base: "vite-pages-example",
   plugins: [
     vpr,
     createPlugin({
