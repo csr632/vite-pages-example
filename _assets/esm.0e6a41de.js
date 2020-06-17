@@ -1,92 +1,4 @@
-import { R as React, L as Link } from './client.4464e5a6.js';
-
-var s = {"topBar":"topBar_67634860","logo":"logo_67634860","navs":"navs_67634860","navsList":"navsList_67634860","navsListItem":"navsListItem_67634860"};
-
-const TopBar = ({ topNavs, logo }) => {
-    return (React.createElement("div", { className: s.topBar },
-        React.createElement("div", { className: s.logo }, logo),
-        React.createElement("div", { className: s.navs },
-            React.createElement("ul", { className: s.navsList }, topNavs === null || topNavs === void 0 ? void 0 : topNavs.map((item, index) => {
-                let content;
-                if ('href' in item) {
-                    content = (React.createElement("a", { href: item.href, target: "_blank", className: s.navsListItem }, item.text));
-                }
-                else {
-                    content = (React.createElement(Link, { to: item.path, className: s.navsListItem }, item.text));
-                }
-                return React.createElement("li", { key: index }, content);
-            })))));
-};
-
-var s$1 = {"sideMenu":"sideMenu_1d7dff16"};
-
-const SideMenu = ({ data }) => {
-    return (React.createElement("ul", { className: s$1.sideMenu }, data.map((item, index) => {
-        return (React.createElement("li", { key: index },
-            React.createElement(Link, { to: item.path }, item.text)));
-    })));
-};
-
-var s$2 = {"layout":"layout_70a6a448","body":"body_70a6a448","content":"content_70a6a448"};
-
-;
-
-;
-
-const Layout = ({ Content, sideMenuData, topNavs, logo, applyMdStyle, path, }) => {
-    return (React.createElement("div", { className: s$2.layout },
-        React.createElement(TopBar, { topNavs: topNavs, logo: logo }),
-        React.createElement("div", { className: s$2.body },
-            React.createElement(SideMenu, { data: sideMenuData }),
-            React.createElement("div", { className: s$2.content + (applyMdStyle ? ` markdown-body` : ''), key: path },
-                React.createElement(Content, null)))));
-};
-
-const createRender = ({ topNavs, logo, sideMenuData, } = {}) => {
-    return (pageData, pages) => {
-        return (React.createElement(Layout, { Content: pageData.default, sideMenuData: sideMenuData !== null && sideMenuData !== void 0 ? sideMenuData : defaultMenu(pages), topNavs: topNavs !== null && topNavs !== void 0 ? topNavs : [], logo: logo, applyMdStyle: pageData.sourceType === 'md', path: pageData.path }));
-    };
-};
-function defaultMenu(pages) {
-    return Object.entries(pages)
-        .sort((a, b) => {
-        const [pathA, { staticData: staticDataA }] = a;
-        const [pathB, { staticData: staticDataB }] = b;
-        let ASort;
-        let BSort;
-        if (staticDataA.sort)
-            ASort = Number(staticDataA.sort);
-        else
-            ASort = 1;
-        if (staticDataB.sort)
-            BSort = Number(staticDataB.sort);
-        else
-            BSort = 1;
-        if (ASort !== BSort)
-            return ASort - BSort;
-        return pathA.localeCompare(pathB);
-    })
-        .map(([path, { staticData }]) => {
-        return {
-            path,
-            text: path,
-        };
-    });
-}
-
-var _render = createRender({
-  topNavs: [
-    {
-      text: "🎮 Example",
-      href: "https://github.com/csr632/vite-pages-example"
-    },
-    {
-      text: "⭐ Github",
-      href: "https://github.com/vitejs/vite-plugin-react-pages"
-    }
-  ],
-  logo: "Vite Pages React"
-});
+import { R as React } from './clientRender.c6787aae.js';
 
 function _defineProperty(obj, key, value) {
   if (key in obj) {
@@ -251,4 +163,4 @@ function createElement (type, props) {
   return React.createElement.apply(null, args);
 }
 
-export { _render as _, createElement as c };
+export { createElement as c };

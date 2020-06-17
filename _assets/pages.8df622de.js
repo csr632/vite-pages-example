@@ -1,6 +1,5 @@
-import './client.4464e5a6.js';
-import { c as createElement } from './esm.50253d38.js';
-export { _ as renderPage } from './esm.50253d38.js';
+import './clientRender.c6787aae.js';
+import { c as createElement } from './esm.0e6a41de.js';
 
 const layoutProps = {};
 const MDXLayout = "wrapper";

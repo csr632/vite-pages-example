@@ -1,6 +1,5 @@
-import './client.4464e5a6.js';
-import { c as createElement } from './esm.50253d38.js';
-export { _ as renderPage } from './esm.50253d38.js';
+import './clientRender.c6787aae.js';
+import { c as createElement } from './esm.0e6a41de.js';
 
 const layoutProps = {};
 const MDXLayout = "wrapper";
@@ -15,23 +14,25 @@ function MDXContent({components, ...props}) {
     ...{
       href: "https://github.com/csr632/vite-plugin-react-pages"
     }
-  }, `vite-plugin-react-page`), ` is a `, createElement("a", {
+  }, `vite-plugin-react-page`), ` (let's call it "vite pages") is a React framework powered by `, createElement("a", {
     parentName: "p",
     ...{
       href: "https://github.com/vitejs/vite"
     }
-  }, `vite`), ` plugin for React. `, createElement("strong", {
+  }, `vite`), `. `, createElement("strong", {
     parentName: "p"
-  }, `It is very suitable for document site. It is also a great React UI development environment`), ` (like `, createElement("a", {
+  }, `It is very suitable for documentation site. It can also serve as a React UI development environment for your components.`), ` (like `, createElement("a", {
     parentName: "p",
     ...{
       href: "https://storybook.js.org/"
     }
-  }, `storybook`), `).`), createElement("ul", null, createElement("li", {
+  }, `storybook`), `). It has many features that help developers `, createElement("strong", {
+    parentName: "p"
+  }, `create an React App quickly`), `:`), createElement("ul", null, createElement("li", {
     parentName: "ul"
   }, createElement("strong", {
     parentName: "li"
-  }, `Fantastic development experience`), `. Start the local development server in a blink, even when you have many pages. Hot module replacement works with React and Mdx, so you can get instant feedback when you edit the files. Big thanks to vite.`), createElement("li", {
+  }, `Fantastic development experience`), `. Start the local development server in a blink, even when you have many pages. Hot module replacement works with React and Mdx, so you can get instant feedback when you edit the files.`), createElement("li", {
     parentName: "ul"
   }, createElement("strong", {
     parentName: "li"
@@ -53,17 +54,15 @@ function MDXContent({components, ...props}) {
     parentName: "ul"
   }, createElement("strong", {
     parentName: "li"
-  }, `Simple but powerful theme customization`), `. With `, createElement("strong", {
-    parentName: "li"
-  }, `only one theme API`), `, you can customize anything on the page. It is easy to write a theme that is sharable and configurable. If you use typescript, your theme configuration code will get type-check and intelliSense.`), createElement("li", {
+  }, `Simple but powerful theme customization`), `. You can customize anything on the page. It is easy to write a theme that is sharable and configurable. If you use typescript, your theme configuration code will get type-check and intelliSense.`), createElement("li", {
     parentName: "ul"
   }, createElement("strong", {
     parentName: "li"
-  }, `Automatic code splitting based on pages`), `. Readers don't need to download the whole app, they only load page data as needed.`), createElement("li", {
+  }, `Automatic code splitting based on pages`), `. Visitors don't need to download the whole app, they only load page data as needed.`), createElement("li", {
     parentName: "ul"
   }, createElement("strong", {
     parentName: "li"
-  }, `Support SSR out of the box`), `. Get even better user experience.`)), createElement("h2", null, `Getting stated`), createElement("ol", null, createElement("li", {
+  }, `Support SSR out of the box`), `. By pre-rendering your app into HTML in buildtime, users can see the content before any JS is loaded.`)), createElement("h2", null, `Getting stated`), createElement("ol", null, createElement("li", {
     parentName: "ol"
   }, `clone `, createElement("a", {
     parentName: "li",
@@ -90,7 +89,12 @@ function MDXContent({components, ...props}) {
     parentName: "li"
   }, `npm run ssr`), ` and serve the `, createElement("inlineCode", {
     parentName: "li"
-  }, `dist`), `. You can disable javascript in your browser, to verify if it can still render.`)));
+  }, `dist`), `. You can `, createElement("a", {
+    parentName: "li",
+    ...{
+      href: "https://developers.google.com/web/tools/chrome-devtools/javascript/disable"
+    }
+  }, `disable javascript in your browser`), `, to verify if it can still render.`)));
 }
 MDXContent.isMDXComponent = true;
 
