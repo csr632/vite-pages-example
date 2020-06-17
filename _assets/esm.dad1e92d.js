@@ -1,4 +1,4 @@
-import { R as React } from './clientRender.c6787aae.js';
+import { R as React } from './clientRender.e5bbf6a3.js';
 
 function _defineProperty(obj, key, value) {
   if (key in obj) {

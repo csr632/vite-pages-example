@@ -1,5 +1,5 @@
-import './clientRender.c6787aae.js';
-import { c as createElement } from './esm.0e6a41de.js';
+import './clientRender.e5bbf6a3.js';
+import { c as createElement } from './esm.dad1e92d.js';
 
 const layoutProps = {};
 const MDXLayout = "wrapper";
@@ -21,7 +21,7 @@ function MDXContent({components, ...props}) {
     }
   }, `vite`), `. `, createElement("strong", {
     parentName: "p"
-  }, `It is very suitable for documentation site. It can also serve as a React UI development environment for your components.`), ` (like `, createElement("a", {
+  }, `It is very suitable for documentation site. It can also serve as a stories(demos) development environment for your library.`), ` (like `, createElement("a", {
     parentName: "p",
     ...{
       href: "https://storybook.js.org/"
