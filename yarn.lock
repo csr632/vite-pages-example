@@ -515,10 +515,18 @@
     "@types/history" "*"
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^16.9.36":
+"@types/react@*":
   version "16.9.36"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.36.tgz#ade589ff51e2a903e34ee4669e05dbfa0c1ce849"
   integrity sha512-mGgUb/Rk/vGx4NCvquRuSH0GHBQKb1OqpGS9cT9lFxlTLHZgkksgI60TuIxubmn7JuCb+sENHhQciqa0npm0AQ==
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^2.2.0"
+
+"@types/react@^16.9.38":
+  version "16.9.38"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.38.tgz#868405dace93a4095d3e054f4c4a1de7a1ac0680"
+  integrity sha512-pHAeZbjjNRa/hxyNuLrvbxhhnKyKNiLC6I5fRF2Zr/t/S6zS41MiyzH4+c+1I9vVfvuRt1VS2Lodjr4ZWnxrdA==
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
@@ -3273,25 +3281,26 @@ vfile@^4.0.0:
     unist-util-stringify-position "^2.0.0"
     vfile-message "^2.0.0"
 
-vite-pages-theme-basic@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/vite-pages-theme-basic/-/vite-pages-theme-basic-0.1.1.tgz#eb83dcfb4310b65ba1a5b7d890817c6bb58b8faf"
-  integrity sha512-JpKSkv6HeoNWQHLudiX/w+xMwSe25aI1TZF38gKlE1WgsulmCM00o7SE4TILPrbswEyGuOu7mIGhkeU2iokQeg==
+vite-pages-theme-basic@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/vite-pages-theme-basic/-/vite-pages-theme-basic-0.2.0.tgz#2a62bbd04a16a0deed5fec1a6e3767f008320e1a"
+  integrity sha512-8mLsdD6NNNiVMID1bKkZlNFQYUsbD6dkuvpWYe0gFF7//eJQmonvlrEBVYFtwrR+LBO1fnerh6rGBmb//TO1hg==
   dependencies:
     github-markdown-css "^4.0.0"
 
-vite-plugin-mdx@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/vite-plugin-mdx/-/vite-plugin-mdx-0.0.2.tgz#33f443d9a131eae012a9762600ff09906c7f5a6c"
-  integrity sha512-S6qYMmaC9z6w9LiD5GuWO+ixqhqgq6bSFKbqkUrzDAbyqenvmdROh91UjR6xEfh7fLTEYXuwf/UAoJjh54aqXg==
+vite-plugin-mdx@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/vite-plugin-mdx/-/vite-plugin-mdx-0.1.2.tgz#b9a507dff85793493d89f3433f589c022670ba02"
+  integrity sha512-T6RrYCXqTNNofNdb3j2xwIb3s7zd7ZJPvGreGvAlSSzdnqAb74mifYPsnZyQNVVPvpe15o/LxV1A3BYy7aaQVg==
   dependencies:
     "@mdx-js/mdx" "^1.6.5"
     "@mdx-js/react" "^1.6.5"
+    remark-frontmatter "^2.0.0"
 
-vite-plugin-react-pages@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/vite-plugin-react-pages/-/vite-plugin-react-pages-0.1.2.tgz#f21dde2c9240e957f078bdde0fcb0b901e7231a9"
-  integrity sha512-2voieEEZ5WiGDQWOjiXebvA1sToIsIaCbhmwSxk17JMtPAH3YK7+EH+e39uEqKxJRThz1jJxlUSMc72gaoh9SQ==
+vite-plugin-react-pages@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/vite-plugin-react-pages/-/vite-plugin-react-pages-0.2.0.tgz#6bfea6a78e8a6915451dc80df9d997fb8921fd65"
+  integrity sha512-Xc2KHLGLdOIrMu4boAnwbIacubXHBNgJg2qLnWT6Wsw57Y+EJ3eBxkxEOa0D/6/5hr2XJDYKmozbYPNlTNUFuw==
   dependencies:
     find-up "^4.1.0"
     fs-extra "^9.0.1"

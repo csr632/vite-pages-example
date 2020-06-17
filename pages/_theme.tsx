@@ -1,6 +1,6 @@
-import { createRender } from 'vite-pages-theme-basic'
+import { createTheme } from 'vite-pages-theme-basic'
 
-export default createRender({
+export default createTheme({
   topNavs: [
     {
       text: '🎮 Example',
@@ -11,5 +11,5 @@ export default createRender({
       href: 'https://github.com/vitejs/vite-plugin-react-pages',
     },
   ],
-  logo: 'Vite Pages React',
+  logo: 'Vite Pages',
 })
