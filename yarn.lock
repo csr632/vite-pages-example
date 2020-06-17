@@ -3281,10 +3281,10 @@ vfile@^4.0.0:
     unist-util-stringify-position "^2.0.0"
     vfile-message "^2.0.0"
 
-vite-pages-theme-basic@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/vite-pages-theme-basic/-/vite-pages-theme-basic-0.2.0.tgz#2a62bbd04a16a0deed5fec1a6e3767f008320e1a"
-  integrity sha512-8mLsdD6NNNiVMID1bKkZlNFQYUsbD6dkuvpWYe0gFF7//eJQmonvlrEBVYFtwrR+LBO1fnerh6rGBmb//TO1hg==
+vite-pages-theme-basic@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/vite-pages-theme-basic/-/vite-pages-theme-basic-0.2.1.tgz#50e73af169f60c619e40811b7886c15c80b6f2d9"
+  integrity sha512-stD/PgBuFBsnlYdm8O9rg9vdfL9VtzL7VAXv5VvTpSH1NgzCh+3blQeRB2zX8pBMWJc47pExG72Yl/dPVWZV4Q==
   dependencies:
     github-markdown-css "^4.0.0"
 
@@ -3297,10 +3297,10 @@ vite-plugin-mdx@^0.1.2:
     "@mdx-js/react" "^1.6.5"
     remark-frontmatter "^2.0.0"
 
-vite-plugin-react-pages@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/vite-plugin-react-pages/-/vite-plugin-react-pages-0.2.0.tgz#6bfea6a78e8a6915451dc80df9d997fb8921fd65"
-  integrity sha512-Xc2KHLGLdOIrMu4boAnwbIacubXHBNgJg2qLnWT6Wsw57Y+EJ3eBxkxEOa0D/6/5hr2XJDYKmozbYPNlTNUFuw==
+vite-plugin-react-pages@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/vite-plugin-react-pages/-/vite-plugin-react-pages-0.2.1.tgz#5999604d94a19c5d83d74c059d6bf3cb309e461e"
+  integrity sha512-o54KnJSpPEYvBoYOpoO9FJOdhmKVCHCVBtRmSdsu1Q/5/1bZRMpBMausTSNevZRR/R6A5IjsSNYKbDjMgZOWHQ==
   dependencies:
     find-up "^4.1.0"
     fs-extra "^9.0.1"
