@@ -5,6 +5,7 @@
   "description": "",
   "scripts": {
     "dev": "vite serve --force",
+    "debug": "node --inspect ./node_modules/vite/bin/vite serve",
     "build": "rm -rf dist && vite build --outDir dist",
     "ssr": "rm -rf dist && vite-pages ssr",
     "ssr-for-deploy": "rm -rf dist && vite-pages ssr --base \"/vite-pages-example\"",
