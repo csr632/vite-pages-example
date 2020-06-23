@@ -4561,26 +4561,26 @@ vfile@^4.0.0:
     unist-util-stringify-position "^2.0.0"
     vfile-message "^2.0.0"
 
-vite-pages-theme-basic@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/vite-pages-theme-basic/-/vite-pages-theme-basic-0.3.1.tgz#f40bf50ddec73eff4e628be37bfdd3d9bf1d48e0"
-  integrity sha512-crgIWknbkcUUKLbOhfuCDgle8RNQBsYUoUhwsQVAVhMldKRpmAxJAyu5y6lQeNOYkSFNomzLdjJL9bwo/iRx3g==
+vite-pages-theme-basic@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/vite-pages-theme-basic/-/vite-pages-theme-basic-0.3.2.tgz#59f0c08274a9df83c6f93cfad536cba0cd2eff78"
+  integrity sha512-4O6EYkvClt+5YuiHXbNr2hL9zsZVroMzeSoa0Ir2edHBC51z/ilqrMcZnosCQ23XFB65C3l9Z4r4oEhnnQfduA==
   dependencies:
     github-markdown-css "^4.0.0"
 
-vite-plugin-mdx@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/vite-plugin-mdx/-/vite-plugin-mdx-0.3.1.tgz#207c2e2898866682f121fcda2d7c5d622c4f8557"
-  integrity sha512-OrA6DANKmOaU0rgOHtziwuL5p6fzliyn1pCs/eo9f2uVdiHryQeqP8otXzmk8R7+zS7/GpL6o7QlI7g5oXhLlw==
+vite-plugin-mdx@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/vite-plugin-mdx/-/vite-plugin-mdx-0.3.2.tgz#10df5ba5c1a63b21f3cc9f9b0c4aaa483b6060a7"
+  integrity sha512-awxgF2eZdknhl/ZSNEQCgcyMzIbQ1MVjmhmzYozHOUMb4dUedvaSeeJ7eog/b7SPEvh3V0kF1DVlOlxZMeijUg==
   dependencies:
     "@mdx-js/mdx" "^1.6.6"
     "@mdx-js/react" "^1.6.6"
     remark-frontmatter "^2.0.0"
 
-vite-plugin-react-pages@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/vite-plugin-react-pages/-/vite-plugin-react-pages-0.3.1.tgz#7eaf2c745fbc94f95935e34b6d08e6237129eb43"
-  integrity sha512-uiQGwCkiBxa3VuTka/gvhXnh0+927xhddArnRAnJ7AyxgpgGl91kZFeEPGCeTTTN6APFmr0UVf2ypxXtSbjlKg==
+vite-plugin-react-pages@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/vite-plugin-react-pages/-/vite-plugin-react-pages-0.3.3.tgz#56ab6f95eb22fc30d58c2b8f24bf7c37e07214a5"
+  integrity sha512-Y5Wac6b6bkb4/6xrgtzMdZ7S5kKMZyx7QfI3ABIvxNGMQV4ySNzvJkkF5JPWIsiPePR3X/Nr3n4vGMGUTjWNQw==
   dependencies:
     "@babel/preset-react" "^7.10.1"
     "@babel/preset-typescript" "^7.10.1"
