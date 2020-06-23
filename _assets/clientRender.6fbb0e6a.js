@@ -2413,27 +2413,27 @@ var theme3 = createTheme({
 
 const pages = {};
 pages["/"] = {
-    _importFn: () => import('./__rootIndex__.9fdb50b8.js'),
+    _importFn: () => import('./__rootIndex__.22777fbf.js'),
     staticData: {"sort":0,"sourceType":"md"},
     theme: theme3,
 };
 pages["/page-data"] = {
-    _importFn: () => import('./page-data.4d5ce76a.js'),
+    _importFn: () => import('./page-data.14835b0a.js'),
     staticData: {"sort":3,"sourceType":"md"},
     theme: theme3,
 };
 pages["/pages"] = {
-    _importFn: () => import('./pages.a022910b.js'),
+    _importFn: () => import('./pages.9027f6ab.js'),
     staticData: {"sort":1,"sourceType":"md"},
     theme: theme3,
 };
 pages["/theme"] = {
-    _importFn: () => import('./theme.fe193e24.js'),
+    _importFn: () => import('./theme.4fc1507d.js'),
     staticData: {"sort":2,"sourceType":"md"},
     theme: theme3,
 };
 
-/// <reference types="vite/hmr" />
+/// <reference types="vite/ImportMeta" />
 let routes = getRouteFromPagesData(pages);
 const App = () => {
     return React.createElement(Switch, null, routes);
@@ -2455,7 +2455,7 @@ const Client = ({ initCache }) => {
     var _a;
     const [dataCache, setDataCache] = useState(initCache !== null && initCache !== void 0 ? initCache : { pages: {} });
     return (React.createElement(React.StrictMode, null,
-        React.createElement(BrowserRouter, { basename: (_a = "/vite-pages-example/") === null || _a === void 0 ? void 0 : _a.replace(/\/$/, '') },
+        React.createElement(BrowserRouter, { basename: (_a = ({}).BASE_URL) === null || _a === void 0 ? void 0 : _a.replace(/\/$/, '') },
             React.createElement(dataCacheCtx.Provider, { value: dataCache },
                 React.createElement(setDataCacheCtx.Provider, { value: setDataCache },
                     React.createElement(App, null))))));

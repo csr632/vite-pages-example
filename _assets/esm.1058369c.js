@@ -1,4 +1,4 @@
-import { R as React } from './clientRender.e5bbf6a3.js';
+import { R as React } from './clientRender.6fbb0e6a.js';
 
 function _defineProperty(obj, key, value) {
   if (key in obj) {
@@ -106,10 +106,10 @@ var DEFAULTS = {
   inlineCode: 'code',
   wrapper: function wrapper(_ref) {
     var children = _ref.children;
-    return React.createElement(React.Fragment, {}, children);
+    return /*#__PURE__*/React.createElement(React.Fragment, {}, children);
   }
 };
-var MDXCreateElement = React.forwardRef(function (props, ref) {
+var MDXCreateElement = /*#__PURE__*/React.forwardRef(function (props, ref) {
   var propComponents = props.components,
       mdxType = props.mdxType,
       originalType = props.originalType,
@@ -121,14 +121,14 @@ var MDXCreateElement = React.forwardRef(function (props, ref) {
   var Component = components["".concat(parentName, ".").concat(type)] || components[type] || DEFAULTS[type] || originalType;
 
   if (propComponents) {
-    return React.createElement(Component, _objectSpread2(_objectSpread2({
+    return /*#__PURE__*/React.createElement(Component, _objectSpread2(_objectSpread2({
       ref: ref
     }, etc), {}, {
       components: propComponents
     }));
   }
 
-  return React.createElement(Component, _objectSpread2({
+  return /*#__PURE__*/React.createElement(Component, _objectSpread2({
     ref: ref
   }, etc));
 });

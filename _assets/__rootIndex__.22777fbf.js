@@ -1,9 +1,12 @@
-import './clientRender.e5bbf6a3.js';
-import { c as createElement } from './esm.dad1e92d.js';
+import './clientRender.6fbb0e6a.js';
+import { c as createElement } from './esm.1058369c.js';
 
 const layoutProps = {};
 const MDXLayout = "wrapper";
-function MDXContent({components, ...props}) {
+function MDXContent({
+  components,
+  ...props
+}) {
   return createElement(MDXLayout, {
     ...layoutProps,
     ...props,
