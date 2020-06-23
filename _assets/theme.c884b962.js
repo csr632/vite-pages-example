@@ -1,5 +1,5 @@
-import { L as Link } from './clientRender.6fbb0e6a.js';
-import { c as createElement } from './esm.1058369c.js';
+import { L as Link } from './clientRender.377ad4e2.js';
+import { c as createElement } from './esm.f0121524.js';
 
 const layoutProps = {};
 const MDXLayout = "wrapper";

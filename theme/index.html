@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>📘Vite Pages</title>
-<link rel="stylesheet" href="/vite-pages-example/_assets/style.5cc99d0e.css">
-<link rel="modulepreload" href="/vite-pages-example/_assets/theme.4fc1507d.js" />
+<link rel="stylesheet" href="/vite-pages-example/_assets/style.600871e0.css">
+<link rel="modulepreload" href="/vite-pages-example/_assets/theme.c884b962.js" />
 </head>
 <body>
-  <script>window._vitePagesSSR={"pagePublicPath":"/theme","pageData":"/vite-pages-example/_assets/theme.4fc1507d.js"};</script>
-<div id="root"><div class="layout_70a6a448"><div class="topBar_67634860"><div class="logo_67634860">Vite Pages</div><div class="navs_67634860"><ul class="navsList_67634860"><li><a href="https://github.com/csr632/vite-pages-example" target="_blank" class="navsListItem_67634860">🎮 Example</a></li><li><a href="https://github.com/vitejs/vite-plugin-react-pages" target="_blank" class="navsListItem_67634860">⭐ Github</a></li></ul></div></div><div class="body_70a6a448"><ul class="sideMenu_1d7dff16"><li><a href="/">/</a></li><li><a href="/pages">/pages</a></li><li><a href="/theme">/theme</a></li><li><a href="/page-data">/page-data</a></li></ul><div class="content_70a6a448 markdown-body"><h1>Theme customization</h1><p>vite-pages provides only one theme API: <code>_theme.tsx</code>. It should export an object contains these <strong>render functions</strong>:</p><pre><code class="language-ts">interface ITheme {
+  <script>window._vitePagesSSR={"pagePublicPath":"/theme","pageData":"/vite-pages-example/_assets/theme.c884b962.js"};</script>
+<div id="root"><div class="layout_70a6a448"><div class="topBar_67634860"><div class="logo_67634860">Vite Pages</div><div class="navs_67634860"><ul class="navsList_67634860"><li><a href="https://github.com/csr632/vite-pages-example" target="_blank" class="navsListItem_67634860">🎮 Example</a></li><li><a href="https://github.com/vitejs/vite-plugin-react-pages" target="_blank" class="navsListItem_67634860">⭐ Github</a></li></ul></div></div><div class="body_70a6a448"><ul class="sideMenu_1d7dff16"><li><a href="/vite-pages-example/">/</a></li><li><a href="/vite-pages-example/pages">/pages</a></li><li><a href="/vite-pages-example/theme">/theme</a></li><li><a href="/vite-pages-example/page-data">/page-data</a></li></ul><div class="content_70a6a448 markdown-body"><h1>Theme customization</h1><p>vite-pages provides only one theme API: <code>_theme.tsx</code>. It should export an object contains these <strong>render functions</strong>:</p><pre><code class="language-ts">interface ITheme {
   /**
    * loading the first page&#x27;s data, render the initial loading state.
    * if the app is build with ssr,
@@ -55,7 +55,7 @@
     pages: IPages
   ) =&gt; React.ReactElement | null
 }
-</code></pre><blockquote><p>These render functions should be pure.</p></blockquote><p>Vite-pages collects data from your project and pass them to these render functions. You can learn about the &quot;data&quot; received by the render functions in <a href="/page-data">page-data doc</a>.</p><p>For example:</p><pre><code class="language-tsx">import React from &#x27;react&#x27;
+</code></pre><blockquote><p>These render functions should be pure.</p></blockquote><p>Vite-pages collects data from your project and pass them to these render functions. You can learn about the &quot;data&quot; received by the render functions in <a href="/vite-pages-example/page-data">page-data doc</a>.</p><p>For example:</p><pre><code class="language-tsx">import React from &#x27;react&#x27;
 import Layout from &#x27;../Layout&#x27;
 import type { ITheme } from &#x27;vite-plugin-react-pages/client&#x27;
 
@@ -150,6 +150,6 @@ export default withSiteConfig([
 ])
 </code></pre><p><strong>Config composition is just function composition</strong>. There is no magic here. They are just simple import/export and function composition. vite-pages doesn&#x27;t care how you get the render function, as long as you export the render functions in <code>_theme.tsx</code>.</p><h3>Why design this config API?</h3><h4>Composable</h4><p>It utilize the functional power from JavaScript, making theme config highly composable. Users can share their theme through npm packages.</p><h4>Releases the power of Typescript</h4><p>Users can get Typescript type-check and intelliSense when they are writing these kind of config code. In comparison, <strong>most frameworks out there can&#x27;t utilize the power of Typescript, because their config is too &quot;dynamic&quot; to be type-checked</strong>.</p><h2>Caveat</h2><p>React will re-mount the component if the vdom tree hierarchy changes (.e.g <code>&lt;Layout /&gt;</code> -&gt; <code>&lt;div&gt;&lt;Layout /&gt;&lt;/div&gt;</code>). If you want to retain the Layout component (.e.g so that the SideMenu scroll state won&#x27;t get reset), your theme should render the Layout component in the &quot;same position&quot;.</p><p>The props of the component can change as you like and React will not re-mount it. Themes should take advantage of this property to make Layout behave differently across different pages.</p></div></div></div></div>
   
-<script type="module" src="/vite-pages-example/_assets/clientRender.995ae01e.js"></script>
+<script type="module" src="/vite-pages-example/_assets/clientRender.06ea21a1.js"></script>
 </body>
 </html>
